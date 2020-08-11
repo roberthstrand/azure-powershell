@@ -19,7 +19,7 @@ namespace Microsoft.Azure.Commands.Aks.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -241,6 +241,15 @@ namespace Microsoft.Azure.Commands.Aks.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Default ssh key is already exist. Please use -SshKeyVaule..
+        /// </summary>
+        internal static string DefaultSshKeyAlreadyExist {
+            get {
+                return ResourceManager.GetString("DefaultSshKeyAlreadyExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deploying your managed Kubernetes cluster..
         /// </summary>
         internal static string DeployingYourManagedKubeCluster {
@@ -255,6 +264,15 @@ namespace Microsoft.Azure.Commands.Aks.Properties {
         internal static string DidNotFindJob {
             get {
                 return ResourceManager.GetString("DidNotFindJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t use -GenerateSshKey and -SshKeyVaule that the same time..
+        /// </summary>
+        internal static string DonotUseGenerateSshKeyWithSshKeyValue {
+            get {
+                return ResourceManager.GetString("DonotUseGenerateSshKeyWithSshKeyValue", resourceCulture);
             }
         }
         
