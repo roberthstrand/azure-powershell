@@ -47,14 +47,19 @@ PS C:\>(Get-AzResourceGroup -Name "ContosoRG").Tags
 
 This command gets the resource group named ContosoRG, and displays the tags associated with that group.
 
-### Example 3: Show the Resource groups by location
+### Example 3: Get resource groups with a certain tag
+```
+PS C:\> Get-AzResourceGroup -Tag @{'environment'='prod'}
+```
+
+### Example 4: Show the Resource groups by location
 ```
 PS C:\> Get-AzResourceGroup |
   Sort Location,ResourceGroupName |
   Format-Table -GroupBy Location ResourceGroupName,ProvisioningState,Tags
 ```
 
-### Example 4: Show the names of all the Resource groups in a particular location
+### Example 5: Show the names of all the Resource groups in a particular location
 ```
 PS C:\> Get-AzResourceGroup -Location westus2 |
    Sort ResourceGroupName | 
@@ -63,15 +68,8 @@ PS C:\> Get-AzResourceGroup -Location westus2 |
 
 ### Example 5: Show the Resource groups whose names begin with WebServer
 ```
-PS C:\> Get-AzResourceGroup | Where ResourceGroupName -like WebServer*
+PS C:\> Get-AzResourceGroup -Name WebServer*
 ```
-
-### Example 6: Get a resource group by name
-```
-PS C:\> Get-AzResourceGroup -Name "EngineerBlog*"
-```
-
-This command gets the Azure resource group in your subscription that start with "EngineerBlog".
 
 ## PARAMETERS
 
